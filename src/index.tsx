@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './containers/App';
+import App from './containers/App.tsx';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 
@@ -19,6 +19,3 @@ ReactDOM.render(
 reportWebVitals();
 
 
-
-
-//C:\Users\Aneta Tschernay\Desktop\udemy\robofriends

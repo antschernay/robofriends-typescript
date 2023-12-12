@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
-function ErrorBoundary(props) {
+
+type Props = {
+  children?: JSX.Element
+}
+
+
+function ErrorBoundary(props: Props) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {

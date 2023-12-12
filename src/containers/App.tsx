@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll'
-import ErrorBounduary from '../components/ErrorBoundary';
+import CardList from '../components/CardList.tsx';
+import SearchBox from '../components/SearchBox.tsx';
+import Scroll from '../components/Scroll.tsx'
+import ErrorBounduary from '../components/ErrorBoundary.tsx';
 import './app.css'
+
+export interface IRobot {
+    name: string;
+    id: number;
+    email: string;
+}
 
 
 function App() {
@@ -19,12 +25,12 @@ function App() {
     }, [])
     
 
-    const onSearchChange = (event) => {
+    const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         setSearchfield(event.target.value)
     }
 
 
-    const filteredRobots = robots.filter(robot =>{
+    const filteredRobots = robots.filter((robot: IRobot) =>{
         return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
 
