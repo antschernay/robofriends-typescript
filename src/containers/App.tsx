@@ -14,8 +14,8 @@ export interface IRobot {
 
 function App() {
     
-    const [robots, setRobots] = useState([]);
-    const [searchfield, setSearchfield] = useState('')
+    const [robots, setRobots] = useState<IRobot[]>([]);
+    const [searchfield, setSearchfield] = useState<string>('');
 
 
     useEffect(() => {
